@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mystyles.css">
+
     <title>Employee</title>
 
 </head>
@@ -27,20 +27,101 @@
             <div class="collapse navbar-collapse" id="Navbar">
 
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a class="nav-link" href="/Indian/index.html"><span class="fa fa-home "></span> Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Indian/aboutus.html"><span class="fa fa-info "></span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Indian/table.html"><span class="fa fa-list "></span> Reserve Table</a></li>
-                    <li class="nav-item "><a class="nav-link" href="/Indian/contactus.html"><span class="fa fa-address-card"></span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html"><span class="fa fa-home "></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutus.html"><span class="fa fa-info "></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/table.html"><span class="fa fa-list "></span> Reserve Table</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/contactus.html"><span class="fa fa-address-card"></span> Contact</a></li>
                 </ul>
-               
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login /</a>
+                </span>
                 <span class="navbar-text">
                     <a data-toggle="modal" data-target="#signupModal">
-                        <span ></span> Restaurant</a>
+                        <span ></span> Sign Up</a>
                 </span>
             </div>
         </div>
     </nav>
-   
+    <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                 <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login</h4>
+                        <button type="button" class="close"
+                           data-dismiss="modal"> &times; </button>
+                    </div>
+                    <form  action="login.php" method="post">
+                    <div class="modal-body" class="form-inline">
+
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email"name="emailid" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <input type="password" class="form-control form-control-sm mr-1" name="pass"id="exampleInputPassword3" placeholder="Password">
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox"> Remember me
+                                    </label>
+                                </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="signupModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                     <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Sign Up</h4>
+                            <button type="button" class="close"
+                               data-dismiss="modal"> &times; </button>
+                        </div>
+
+                                <form  action="signup.php" method="post">
+                                    <div class="modal-body" class="form-inline">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="name">Full Name</label>
+                                        <input type="text" class="form-control form-control-sm mr-1" name="funame" id="fname" placeholder="Enter full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                        <input type="email" class="form-control form-control-sm mr-1" name="emailid" id="exampleInputEmail3" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                        <input type="password" class="form-control form-control-sm mr-1" name="pass" id="exampleInputPassword3" placeholder="Password">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox"> Remember me
+                                        </label>
+                                    </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm" name="signup" id="signup">Sign up</button>
+                            </div>
+                                </form>
+                    </div>
+                </div>
+            </div>
+
+
+
          <header class="jumbotron">
              <div class="container">
                  <div class="row row-header">
@@ -54,14 +135,6 @@
              </div>
 </header>
 <br><br><hr>
-
-<?php
-session_start();
-//echo "132456";
-echo "<center><br>";
-echo $_SESSION['myValue'];
-echo"<br></center>";
-?>
 
 <center><p><b>You can Pay Us Through Paytm:  </b>8989034822</center><br><br><hr>
 
