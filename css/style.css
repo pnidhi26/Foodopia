@@ -1,0 +1,57 @@
+.row-header {
+    margin:0px auto;
+    padding: 0px auto;
+}
+
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
+}
+.footer{
+    background-color: #FF7F50;
+    margin: 0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron{
+    padding: 70px 30px 70px 30px;
+    margin: 0px auto;
+    background:#696969;
+    color: floralwhite;
+
+}
+
+.address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+.body{
+    padding: 50px 0px 50px 0px;
+    z-index: 0;
+}
+.navbar-inverse{
+    background-color:#FF7F50;
+}
+.tab-content{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding:10px
+}
+.fm{
+    background:#F57C00 ;
+    color: floralwhite;
+    margin: 0px auto;
+    padding: 10px 20px 10px 20px;
+}
+input[type="radio"]{
+    margin: 0 3px 0 3px;
+}
+.bd{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
